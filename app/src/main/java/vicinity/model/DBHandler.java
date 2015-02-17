@@ -1,7 +1,6 @@
 package vicinity.model;
 
-
-//rubaaaa3
+//Github test
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteException;
@@ -23,8 +22,8 @@ public class DBHandler extends SQLiteOpenHelper {
     private final Context myContext;
     private SQLiteDatabase vicinityDB;
     //The following table must be created automatically whenever you add an external database
-    private static final String CREATE_TABLE_ANDROID="CREATE TABLE \"android_metadata\" (\"locale\" TEXT DEFAULT 'en_US');";
-    private static final String INSERT_ANDROID_VALUES="INSERT INTO \"android_metadata\" VALUES ('en_US');";
+    //private static final String CREATE_TABLE_ANDROID="CREATE TABLE \"android_metadata\" (\"locale\" TEXT DEFAULT 'en_US');";
+    //private static final String INSERT_ANDROID_VALUES="INSERT INTO \"android_metadata\" VALUES ('en_US');";
 
 
 
@@ -39,8 +38,8 @@ public class DBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(CREATE_TABLE_ANDROID);
-        db.execSQL(INSERT_ANDROID_VALUES);
+        //db.execSQL(CREATE_TABLE_ANDROID);
+        //db.execSQL(INSERT_ANDROID_VALUES);
     }
 
     @Override
