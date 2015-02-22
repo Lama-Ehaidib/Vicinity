@@ -180,8 +180,4 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /*public void getWifiActivity(View view) {
-        Intent intent = new Intent(getApplicationContext(), WiFiActivity.class);
-        startActivity(intent);
-    }*/
 }

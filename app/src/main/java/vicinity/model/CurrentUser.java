@@ -47,7 +47,7 @@ public class CurrentUser extends User {
             dbH.createDataBase();
             dbH.openDataBase();
             //CHANGE THE TABLE NAME "Friend" I ONLY DID THIS TO TRY CAUSE THERE WAS NOT A PROFILE TABLE
-            database.execSQL("INSERT INTO Friend (username) VALUES ('"+newUser.getUsername()+"');");
+            database.execSQL("INSERT INTO User (username) VALUES ('"+newUser.getUsername()+"');");
             Log.i(TAG, "User added from CurrentUser class");
             dbH.close();
         }
