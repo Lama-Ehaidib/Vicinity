@@ -23,20 +23,24 @@ import vicinity.model.DBHandler;
 
 public class MainActivity extends ActionBarActivity {
 
-    private static final String TAG = "rubasMessage";
+    public static final String TAG = "rubasMessage";//it was private
     EditText username_input;
     Button submit_button;
     TextView launchScreen;
     final Context context = this;
     public String username;
     DBHandler dbHandler;
+    Intent intent;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {//Lama
+    protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(TAG, "onCreate");
+
+        intent = new Intent(this, WiFiService.class);
+        startService(intent);
 
         username_input = (EditText) findViewById(R.id.username);
         submit_button = (Button) findViewById(R.id.button);
@@ -112,6 +116,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onResume() {
         super.onResume();
         Log.i(TAG, "onResume");
+        //startService(intent);
     }
 
 
@@ -139,6 +144,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        //stopService(intent);
         Log.i(TAG, "onDestroy");
     }
 
